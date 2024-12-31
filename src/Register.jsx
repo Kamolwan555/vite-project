@@ -26,7 +26,7 @@ export default function Register() {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
-              อีเมลของคุณ
+              อีเมล
             </label>
             <div className="mt-1 relative rounded-md shadow-sm">
               <input
@@ -34,7 +34,7 @@ export default function Register() {
                 name="email"
                 type="email"
                 required
-                className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
                 placeholder="อีเมลของคุณ"
               />
             </div>
@@ -53,7 +53,7 @@ export default function Register() {
                 name="phone"
                 type="tel"
                 required
-                className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
                 placeholder="เบอร์โทรศัพท์"
               />
             </div>
@@ -73,7 +73,7 @@ export default function Register() {
                   name="firstName"
                   type="text"
                   required
-                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
                   placeholder="ชื่อ"
                 />
               </div>
@@ -92,7 +92,7 @@ export default function Register() {
                   name="lastName"
                   type="text"
                   required
-                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
                   placeholder="นามสกุล"
                 />
               </div>
@@ -112,7 +112,7 @@ export default function Register() {
                 name="password"
                 type="password"
                 required
-                className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
                 placeholder="กำหนดรหัสผ่านขั้นต่ำ 8 ตัว"
               />
             </div>
@@ -131,7 +131,7 @@ export default function Register() {
                 name="confirmPassword"
                 type="password"
                 required
-                className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
                 placeholder="กำหนดรหัสผ่านขั้นต่ำ 8 ตัว"
               />
             </div>
