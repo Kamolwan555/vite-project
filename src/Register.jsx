@@ -353,7 +353,7 @@ export default function Register() {
               <button
                 type="button"
                 onClick={handleBack}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-100 hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-50"
+                className="w-full flex justify-center py-2 px-4 border rounded-md shadow-sm text-sm font-medium back-button hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300"
               >
                 ย้อนกลับ
               </button>
