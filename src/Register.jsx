@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Register.css";
 
 export default function Register() {
@@ -45,19 +45,14 @@ export default function Register() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
+    <div className="register-container">
+      <div className="register-form-wrapper">
         {page === 1 && (
           <>
-            <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-              ลงทะเบียน
-            </h2>
-            <form className="space-y-4" onSubmit={handleNext}>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
+            <h2 className="form-title">ลงทะเบียน</h2>
+            <form className="form-content" onSubmit={handleNext}>
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">
                   อีเมล
                 </label>
                 <input
@@ -67,16 +62,13 @@ export default function Register() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                  className="form-input"
                   placeholder="อีเมลของคุณ"
                 />
               </div>
 
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700"
-                >
+              <div className="form-group">
+                <label htmlFor="phone" className="form-label">
                   เบอร์โทรศัพท์
                 </label>
                 <input
@@ -86,17 +78,14 @@ export default function Register() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                  className="form-input"
                   placeholder="เบอร์โทรศัพท์"
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="firstName"
-                    className="block text-sm font-medium text-gray-700"
-                  >
+              <div className="form-grid">
+                <div className="form-group">
+                  <label htmlFor="firstName" className="form-label">
                     ชื่อ
                   </label>
                   <input
@@ -106,16 +95,13 @@ export default function Register() {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                    className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                    className="form-input"
                     placeholder="ชื่อ"
                   />
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="lastName"
-                    className="block text-sm font-medium text-gray-700"
-                  >
+                <div className="form-group">
+                  <label htmlFor="lastName" className="form-label">
                     นามสกุล
                   </label>
                   <input
@@ -125,17 +111,14 @@ export default function Register() {
                     value={formData.lastName}
                     onChange={handleChange}
                     required
-                    className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                    className="form-input"
                     placeholder="นามสกุล"
                   />
                 </div>
               </div>
 
-              <div>
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700"
-                >
+              <div className="form-group">
+                <label htmlFor="password" className="form-label">
                   รหัสผ่าน
                 </label>
                 <input
@@ -145,16 +128,13 @@ export default function Register() {
                   value={formData.password}
                   onChange={handleChange}
                   required
-                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                  className="form-input"
                   placeholder="รหัสผ่าน"
                 />
               </div>
 
-              <div>
-                <label
-                  htmlFor="confirmPassword"
-                  className="block text-sm font-medium text-gray-700"
-                >
+              <div className="form-group">
+                <label htmlFor="confirmPassword" className="form-label">
                   ยืนยันรหัสผ่าน
                 </label>
                 <input
@@ -164,26 +144,20 @@ export default function Register() {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   required
-                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                  className="form-input"
                   placeholder="ยืนยันรหัสผ่าน"
                 />
               </div>
 
-              <div>
-                <button
-                  type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-                >
+              <div className="form-group">
+                <button type="next" className="form-button next-button">
                   ถัดไป
                 </button>
               </div>
 
-              <p className="mt-4 text-center text-sm text-gray-600">
+              <p className="form-footer">
                 มีบัญชีอยู่แล้ว?{" "}
-                <a
-                  href="#"
-                  className="font-medium text-green-600 hover:text-green-500"
-                >
+                <a href="#" className="form-link">
                   เข้าสู่ระบบ
                 </a>
               </p>
@@ -193,15 +167,10 @@ export default function Register() {
 
         {page === 2 && (
           <>
-            <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-              ลงทะเบียน
-            </h2>
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div>
-                <label
-                  htmlFor="address"
-                  className="block text-sm font-medium text-gray-700"
-                >
+            <h2 className="form-title">ลงทะเบียน</h2>
+            <form className="form-content" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="address" className="form-label">
                   บ้านเลขที่
                 </label>
                 <input
@@ -211,17 +180,14 @@ export default function Register() {
                   value={formData.address}
                   onChange={handleChange}
                   required
-                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                  className="form-input"
                   placeholder="บ้านเลขที่"
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="village"
-                    className="block text-sm font-medium text-gray-700"
-                  >
+              <div className="form-grid">
+                <div className="form-group">
+                  <label htmlFor="village" className="form-label">
                     หมู่ที่
                   </label>
                   <input
@@ -230,16 +196,13 @@ export default function Register() {
                     type="text"
                     value={formData.village}
                     onChange={handleChange}
-                    className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                    className="form-input"
                     placeholder="หมู่ที่"
                   />
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="soi"
-                    className="block text-sm font-medium text-gray-700"
-                  >
+                <div className="form-group">
+                  <label htmlFor="soi" className="form-label">
                     ซอย
                   </label>
                   <input
@@ -248,18 +211,15 @@ export default function Register() {
                     type="text"
                     value={formData.soi}
                     onChange={handleChange}
-                    className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                    className="form-input"
                     placeholder="ซอย"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="soi"
-                    className="block text-sm font-medium text-gray-700"
-                  >
+              <div className="form-grid">
+                <div className="form-group">
+                  <label htmlFor="road" className="form-label">
                     ถนน
                   </label>
                   <input
@@ -268,16 +228,13 @@ export default function Register() {
                     type="text"
                     value={formData.road}
                     onChange={handleChange}
-                    className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                    className="form-input"
                     placeholder="ถนน"
                   />
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="provinces"
-                    className="block text-sm font-medium text-gray-700"
-                  >
+                <div className="form-group">
+                  <label htmlFor="provinces" className="form-label">
                     จังหวัด
                   </label>
                   <input
@@ -286,18 +243,15 @@ export default function Register() {
                     type="text"
                     value={formData.provinces}
                     onChange={handleChange}
-                    className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                    className="form-input"
                     placeholder="จังหวัด"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="subdistrict"
-                    className="block text-sm font-medium text-gray-700"
-                  >
+              <div className="form-grid">
+                <div className="form-group">
+                  <label htmlFor="subdistrict" className="form-label">
                     อำเภอหรือเขต
                   </label>
                   <input
@@ -306,16 +260,13 @@ export default function Register() {
                     type="text"
                     value={formData.subdistrict}
                     onChange={handleChange}
-                    className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                    className="form-input"
                     placeholder="อำเภอหรือเขต"
                   />
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="district"
-                    className="block text-sm font-medium text-gray-700"
-                  >
+                <div className="form-group">
+                  <label htmlFor="district" className="form-label">
                     ตำบลหรือแขวง
                   </label>
                   <input
@@ -324,17 +275,14 @@ export default function Register() {
                     type="text"
                     value={formData.district}
                     onChange={handleChange}
-                    className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                    className="form-input"
                     placeholder="ตำบลหรือแขวง"
                   />
                 </div>
               </div>
 
-              <div>
-                <label
-                  htmlFor="postcode"
-                  className="block text-sm font-medium text-gray-700"
-                >
+              <div className="form-group">
+                <label htmlFor="postcode" className="form-label">
                   รหัสไปรษณีย์
                 </label>
                 <input
@@ -344,25 +292,22 @@ export default function Register() {
                   value={formData.postcode}
                   onChange={handleChange}
                   required
-                  className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+                  className="form-input"
                   placeholder="รหัสไปรษณีย์"
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-              <button
-                type="button"
-                onClick={handleBack}
-                className="w-full flex justify-center py-2 px-4 border rounded-md shadow-sm text-sm font-medium back-button hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300"
-              >
-                ย้อนกลับ
-              </button>
-              <button
-                type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-              >
-                ลงทะเบียน
-              </button>
+              <div className="form-grid">
+                <button
+                  type="button"
+                  onClick={handleBack}
+                  className="form-button back-button"
+                >
+                  ย้อนกลับ
+                </button>
+                <button type="submit" className="form-button submit-button">
+                  ลงทะเบียน
+                </button>
               </div>
             </form>
           </>
