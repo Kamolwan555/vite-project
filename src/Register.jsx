@@ -75,7 +75,7 @@ export default function Register() {
                   htmlFor="phone"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  เบอร์โทรศัพท์
+                  เบอร์โทรศัพท์n
                 </label>
                 <input
                   id="phone"
